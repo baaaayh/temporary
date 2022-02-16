@@ -378,7 +378,7 @@ body {
     box-sizing: border-box;
     background: #fff;
     width: 100%;
-    z-index: 100;
+    z-index: 104;
     transition: all 0.3s ease;
     .top-header {
         background: #313133;
@@ -819,7 +819,7 @@ footer {
         position: fixed;
         bottom: 190px;
         right: 10px;
-        z-index: 2;
+        z-index: 102;
         transition: 0.3s ease;
         &.fixed {
             position: absolute;
@@ -1291,7 +1291,7 @@ footer {
                 padding-right: 0;
                 background: #fff;
                 transition: left 0.3s ease;
-                z-index: 5;
+                z-index: 104;
                 &.on {
                     left: 0;
                 }

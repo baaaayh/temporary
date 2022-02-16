@@ -432,7 +432,7 @@ body.scroll-down header {
           box-sizing: border-box;
   background: #fff;
   width: 100%;
-  z-index: 100;
+  z-index: 104;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -989,7 +989,7 @@ footer .inner:after {
   position: fixed;
   bottom: 190px;
   right: 10px;
-  z-index: 2;
+  z-index: 102;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -1536,7 +1536,7 @@ footer .inner:after {
     background: #fff;
     -webkit-transition: left 0.3s ease;
     transition: left 0.3s ease;
-    z-index: 5;
+    z-index: 104;
   }
   .bot-header .inner .gnb-container.on {
     left: 0;
