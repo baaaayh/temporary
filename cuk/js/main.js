@@ -70,7 +70,7 @@ var Main = (function () {
             arrows: true,
             slidesToShow: 3.5,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             draggable: true,
             variableWidth: true,
         });

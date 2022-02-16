@@ -857,7 +857,8 @@ h5 {
 }
 input {
     padding: 0 5px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #dbdee1;
+    border-radius: 0;
     box-sizing: border-box;
     @include font-style(15px, #555, 400, 48px);
     vertical-align: middle;
@@ -5048,7 +5049,7 @@ input[type="checkbox"]:checked + label {
     .table-style02,
     .table-style03 {
         touch-action: auto;
-        overflow-x: auto;
+        overflow-x: scroll;
         table {
             width: 660px;
         }

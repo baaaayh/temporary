@@ -1,10 +1,18 @@
+@charset "UTF-8";
 * {
   font-family: "Poppins", "Noto Sans KR", sans-serif;
   line-height: 1;
 }
 
 body {
-  position: relative;
+  -webkit-text-size-adjust: none;
+  /* 크롬, 사파리, 오페라 신버전 */
+  -ms-text-size-adjust: none;
+  /* IE */
+  -moz-text-size-adjust: none;
+  /* 파이어폭스 */
+  -o-text-size-adjust: none;
+  /* 오페라 구버전 */
 }
 
 body.pop-open {
@@ -797,6 +805,7 @@ footer .inner .footer-info address p {
   line-height: 1.7;
   letter-spacing: -0.5px;
   margin-bottom: 15px;
+  -webkit-text-fill-color: #fff;
 }
 
 footer .inner .footer-info > P {
@@ -1988,6 +1997,10 @@ footer .inner:after {
   }
   .float-menu-wrapper .float-menu ul li.btn-top .float-icon {
     background-size: 55px 55px;
+  }
+  .float-menu-wrapper .float-menu ul li.btn-top a:hover .float-text {
+    width: 55px;
+    height: 55px;
   }
   .float-menu-wrapper .float-menu ul li a .float-icon {
     width: 55px;

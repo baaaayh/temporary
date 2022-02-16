@@ -24,7 +24,11 @@ $mustard: #c59c40;
     line-height: 1;
 }
 body {
-    position: relative;
+    -webkit-text-size-adjust: none; /* 크롬, 사파리, 오페라 신버전 */
+    -ms-text-size-adjust: none; /* IE */
+    -moz-text-size-adjust: none; /* 파이어폭스 */
+    -o-text-size-adjust: none; /* 오페라 구버전 */
+
     &.pop-open {
         overflow: hidden;
         &.scroll-down {
@@ -667,6 +671,7 @@ footer {
                 p {
                     @include font-style(15px, #fff, 400, 1.7);
                     margin-bottom: 15px;
+                    -webkit-text-fill-color: #fff;
                 }
             }
             > P {
@@ -1809,6 +1814,14 @@ footer {
                     &.btn-top {
                         .float-icon {
                             background-size: 55px 55px;
+                        }
+                        a {
+                            &:hover {
+                                .float-text {
+                                    width: 55px;
+                                    height: 55px;
+                                }
+                            }
                         }
                     }
                     a {

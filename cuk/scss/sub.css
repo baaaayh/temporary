@@ -1506,7 +1506,8 @@ h5 {
 
 input {
   padding: 0 5px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #dbdee1;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 15px;
@@ -6115,7 +6116,7 @@ input[type="checkbox"]:checked + label {
   .table-style03 {
     -ms-touch-action: auto;
         touch-action: auto;
-    overflow-x: auto;
+    overflow-x: scroll;
   }
   .table-style01 table,
   .table-style02 table,
