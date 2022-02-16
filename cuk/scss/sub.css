@@ -5770,10 +5770,6 @@ input[type="checkbox"]:checked + label {
   .site-map > li .categories > li strong a {
     font-size: 14px;
   }
-  .float-menu-wrapper .float-menu {
-    bottom: auto;
-    top: 100px;
-  }
   .exclam.bg-magenta {
     font-size: 14px;
     font-weight: 400;

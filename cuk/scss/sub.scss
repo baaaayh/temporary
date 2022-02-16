@@ -4614,12 +4614,6 @@ input[type="checkbox"]:checked + label {
             }
         }
     }
-    .float-menu-wrapper {
-        .float-menu {
-            bottom: auto;
-            top: 100px;
-        }
-    }
     .exclam {
         &.bg-magenta {
             @include font-style(14px, #666, 400, 1.6);

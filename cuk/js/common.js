@@ -244,7 +244,7 @@ var Common = (function () {
     function initHeader() {
         document.querySelector(".gnb-container").classList.remove("on");
         document.querySelector(".dim").classList.remove("on");
-        // document.querySelector(".mob-dim").classList.remove("on");
+        document.querySelector(".mob-dim").classList.remove("on");
         // document.querySelector("body").style.overflowY = "auto";
         // $("body").off("scroll touchmove mousewheel");
         document.querySelector("body").classList.remove("off-scroll");
@@ -279,9 +279,6 @@ var Common = (function () {
         if ($winW > 1040) {
             initHeader();
             document.querySelector(".body-dim").classList.remove("on");
-        }
-        if ($winW <= 1040) {
-            // initHeader();
         }
     });
     $(function () {
