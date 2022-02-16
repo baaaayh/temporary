@@ -983,13 +983,13 @@ footer .inner:after {
 
 .float-menu-wrapper {
   position: relative;
+  z-index: 102;
 }
 
 .float-menu-wrapper .float-menu {
   position: fixed;
   bottom: 190px;
   right: 10px;
-  z-index: 102;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }

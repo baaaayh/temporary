@@ -815,11 +815,11 @@ footer {
 // floating-menu
 .float-menu-wrapper {
     position: relative;
+    z-index: 102;
     .float-menu {
         position: fixed;
         bottom: 190px;
         right: 10px;
-        z-index: 102;
         transition: 0.3s ease;
         &.fixed {
             position: absolute;
