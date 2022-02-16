@@ -1767,6 +1767,7 @@ footer .inner:after {
   }
   .float-menu-wrapper .float-menu {
     opacity: 0.4;
+    bottom: 100px;
   }
   .float-menu-wrapper .float-menu:hover {
     opacity: 1;

@@ -1531,6 +1531,7 @@ footer {
     .float-menu-wrapper {
         .float-menu {
             opacity: 0.4;
+            bottom: 100px;
             &:hover {
                 opacity: 1;
             }
