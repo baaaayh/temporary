@@ -1388,6 +1388,14 @@ h5 {
   background-position: center center;
 }
 
+.table-style01::-webkit-scrollbar-thumb,
+.table-style02::-webkit-scrollbar-thumb,
+.table-style03::-webkit-scrollbar-thumb,
+.table-style-univ::-webkit-scrollbar-thumb,
+.table-form::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
 .dot--magenta {
   position: relative;
   display: inline-block;

@@ -766,6 +766,15 @@ h5 {
         }
     }
 }
+.table-style01,
+.table-style02,
+.table-style03,
+.table-style-univ,
+.table-form {
+    &::-webkit-scrollbar-thumb {
+        background: #999;
+    }
+}
 .dot--magenta {
     position: relative;
     display: inline-block;
