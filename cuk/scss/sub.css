@@ -5772,7 +5772,7 @@ input[type="checkbox"]:checked + label {
   }
   .float-menu-wrapper .float-menu {
     bottom: auto;
-    top: 70%;
+    top: 300px;
   }
   .exclam.bg-magenta {
     font-size: 14px;
