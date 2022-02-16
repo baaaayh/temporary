@@ -2204,11 +2204,6 @@ footer .inner:after {
   .pop-container .table-style03 {
     overflow-x: visible;
   }
-  .pop-container .table-style01::-webkit-scrollbar-thumb,
-  .pop-container .table-style02::-webkit-scrollbar-thumb,
-  .pop-container .table-style03::-webkit-scrollbar-thumb {
-    background: #999;
-  }
   .pop-container .table-style01 table,
   .pop-container .table-style02 table,
   .pop-container .table-style03 table {

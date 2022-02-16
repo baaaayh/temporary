@@ -2080,9 +2080,6 @@ footer {
         .table-style02,
         .table-style03 {
             overflow-x: visible;
-            &::-webkit-scrollbar-thumb {
-                background: #999;
-            }
             table {
                 width: auto;
             }

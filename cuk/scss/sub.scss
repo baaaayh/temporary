@@ -766,15 +766,6 @@ h5 {
         }
     }
 }
-.table-style01,
-.table-style02,
-.table-style03,
-.table-style-univ,
-.table-form {
-    &::-webkit-scrollbar-thumb {
-        background: #999;
-    }
-}
 .dot--magenta {
     position: relative;
     display: inline-block;
@@ -1296,18 +1287,19 @@ span {
             border: 1px solid #ddd;
             .step-card {
                 position: absolute;
-                display: table;
+                display: block;
                 top: 0;
                 left: 0;
                 bottom: 0;
                 width: 150px;
                 height: 100%;
-                vertical-align: middle;
                 background: #f5f5f5;
                 .tb-cell {
-                    display: table-cell;
-                    height: 100%;
-                    vertical-align: middle;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: block;
+                    height: auto;
                     span {
                         display: block;
                         text-align: center;
