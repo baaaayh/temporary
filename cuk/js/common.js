@@ -263,10 +263,8 @@ var Common = (function () {
 
         if ($winW > 1280) {
             toggleMenu();
-            initHeader();
         }
         if ($winW <= 1280) {
-            initHeader();
             var $d2 = document.querySelectorAll("#gnb .depth2");
             for (var i = 0; i <= $d2.length - 1; i++) {
                 if ($d2[i].classList.contains("on")) {
@@ -279,6 +277,9 @@ var Common = (function () {
         }
         if ($winW > 1040) {
             document.querySelector(".body-dim").classList.remove("on");
+        }
+        if ($winW <= 1040) {
+            initHeader();
         }
     });
     $(function () {
