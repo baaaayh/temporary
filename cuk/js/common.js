@@ -280,7 +280,7 @@ var Common = (function () {
             document.querySelector(".body-dim").classList.remove("on");
         }
         if ($winW <= 1040) {
-            initHeader();
+            // initHeader();
         }
     });
     $(function () {
