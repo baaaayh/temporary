@@ -256,7 +256,7 @@ var Common = (function () {
     }
 
     window.addEventListener("resize", function () {
-        alert("resize");
+        // alert("resize");
         document.querySelector(".body-dim").classList.remove("on");
         document.querySelector(".float-menu").classList.remove("active");
         document.querySelector(".quick-menu").classList.remove("active");
@@ -277,6 +277,7 @@ var Common = (function () {
             mobMenuCall();
         }
         if ($winW > 1040) {
+            initHeader();
             document.querySelector(".body-dim").classList.remove("on");
         }
         if ($winW <= 1040) {
