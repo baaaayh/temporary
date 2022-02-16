@@ -68,11 +68,10 @@ var Main = (function () {
         $(".story-slider").slick({
             dots: false,
             arrows: true,
-            slidesToShow: 3.5,
-            slidesToScroll: 1,
             infinite: true,
             draggable: true,
             variableWidth: true,
+            initialSlide: 0,
         });
     }
 
