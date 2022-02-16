@@ -31,12 +31,8 @@ body.off-scroll {
   overflow: hidden;
 }
 
-body.off-scroll.scroll-up header {
-  top: 0;
-}
-
-body.off-scroll.scroll-down header {
-  top: 0;
+body.off-scroll .pop-dim {
+  overflow: hidden;
 }
 
 .hidden {

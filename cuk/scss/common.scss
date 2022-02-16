@@ -44,15 +44,8 @@ body {
     }
     &.off-scroll {
         overflow: hidden;
-        &.scroll-up {
-            header {
-                top: 0;
-            }
-        }
-        &.scroll-down {
-            header {
-                top: 0;
-            }
+        .pop-dim {
+            overflow: hidden;
         }
     }
 }
