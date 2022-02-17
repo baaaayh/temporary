@@ -432,7 +432,7 @@ body.scroll-down header {
           box-sizing: border-box;
   background: #fff;
   width: 100%;
-  z-index: 104;
+  z-index: 100;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -983,7 +983,11 @@ footer .inner:after {
 
 .float-menu-wrapper {
   position: relative;
-  z-index: 102;
+  z-index: 99;
+}
+
+.float-menu-wrapper.on {
+  z-index: 101;
 }
 
 .float-menu-wrapper .float-menu {
@@ -1469,6 +1473,10 @@ footer .inner:after {
   background-size: 68px 47px;
 }
 
+.slick-slider {
+  z-index: 2;
+}
+
 @media screen and (max-width: 1700px) {
   #gnb li {
     padding-left: 0;
@@ -1561,7 +1569,7 @@ footer .inner:after {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    right: 30px;
+    right: 20px;
   }
   .bot-header .inner .gnb-container .mob-etc {
     display: block;

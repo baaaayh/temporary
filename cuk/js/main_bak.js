@@ -82,21 +82,21 @@ var Main = (function () {
         });
         // 리사이징시
         window.addEventListener("resize", function () {
-            var winW = $(window).innerWidth();
+            var winW = window.innerWidth;
             autoHeight();
             if (winW > 1280) {
                 fixBottom(scrPos);
             }
         });
         $(function () {
-            var winW = $(window).innerWidth();
+            var winW = window.innerWidth;
             if (winW > 1280) {
                 fixBottom(scrPos);
             }
         });
 
         function autoHeight() {
-            var currH = $(".people-box.slick-current").innerHeight();
+            var currH = $(".people-box.slick-current").outerHeight();
             $(".people-slider").height(currH);
             $(".people-slider").on(
                 "beforeChange",
@@ -104,7 +104,7 @@ var Main = (function () {
                     var nextNum = nextSlide + 1;
                     var nH = $(
                         ".people-box:nth-child(" + nextNum + ") "
-                    ).innerHeight();
+                    ).outerHeight();
                     $(".people-slider").height(nH);
                 }
             );
@@ -114,9 +114,9 @@ var Main = (function () {
     // 엘리먼트별 포지션
     function posCalc() {
         // 안내, lnb 포지션
-        var anncH = $(".announce-box").outerHeight();
-        var navH = $(".nav-wrapper").outerHeight();
-        var ft = $(".footer").offset().top;
+        var anncH = document.querySelector(".announce-box").clientHeight;
+        var navH = document.querySelector(".nav-wrapper").clientHeight;
+        var ft = document.querySelector(".footer").offsetTop;
         // var ftPos = ft.toFixed();
         // 섹션별 포지션
         return [anncH, navH, ft];
@@ -125,11 +125,11 @@ var Main = (function () {
     function secPos() {
         var sPosValue = [];
         var sHeightV = [];
-        var sectionNum = $("section").length;
+        var sectionNum = document.querySelectorAll("section").length;
         for (var i = 1; i <= sectionNum; i++) {
             var secClass = ".main-sec0" + i;
             var pos = $(".main-sec0" + i).offset().top;
-            var sHeight = $(secClass).outerHeight();
+            var sHeight = document.querySelector(secClass).clientHeight;
             sPosValue[i - 1] = pos;
             sHeightV[i - 1] = sHeight;
         }
@@ -141,11 +141,11 @@ var Main = (function () {
         var ft = posCalc()[2];
         var anncBotPos = scrPos + posCalc()[0];
         var navBotPos = scrPos + posCalc()[1];
-        var headerH = $(".header").outerHeight();
-        var anncTopPos = $(".announce-box").offset().top;
-        var navTopPos = $(".nav-wrapper").offset().top;
-        var anncBox = $(".announce-box");
-        var mainNav = $(".nav-wrapper");
+        var headerH = document.querySelector(".header").clientHeight;
+        var anncTopPos = document.querySelector(".announce-box").offsetTop;
+        var navTopPos = document.querySelector(".nav-wrapper").offsetTop;
+        var anncBox = document.querySelector(".announce-box");
+        var mainNav = document.querySelector(".nav-wrapper");
         var windowTop = $(window).scrollTop();
         var elArray = [
             {
@@ -162,9 +162,9 @@ var Main = (function () {
 
         $.each(elArray, function (index, el) {
             if (el.elBotPos > ft) {
-                el.elName.addClass("fix-bottom");
+                el.elName.classList.add("fix-bottom");
             } else if (windowTop < el.elTopPos - headerH) {
-                el.elName.removeClass("fix-bottom");
+                el.elName.classList.remove("fix-bottom");
             }
         });
     }
@@ -189,7 +189,7 @@ var Main = (function () {
 
     // 스크롤 액션
     function nodesReturn() {
-        var nodesList = $(".nav-wrapper nav ul li");
+        var nodesList = document.querySelectorAll(".nav-wrapper nav ul li");
         return nodesList;
     }
     function pageGoTo(pageNum) {
@@ -200,7 +200,7 @@ var Main = (function () {
         var sp = secPos()[0];
         var sh = secPos()[1];
         var lastIdx = sp.length - 1;
-        var headerH = $(".header").outerHeight();
+        var headerH = document.querySelector(".header").clientHeight;
         var s4Mid = sh[lastIdx - 1] / 2;
         for (i = 0; i < lastIdx; i++) {
             if (scrPos >= sp[i] - headerH && scrPos < sp[i] + sh[i]) {
@@ -213,16 +213,19 @@ var Main = (function () {
     }
     function pageNation(idx) {
         var number = idx;
-        var lnbList = $(".nav-wrapper nav ul li");
-        lnbList.removeClass("active");
-        lnbList.eq(idx).addClass("active");
-        $(".page-num").text("0" + (number + 1));
+        var lnbList = nodesReturn();
+        for (var i = 0; i <= 4; i++) {
+            lnbList[i].classList.remove("active");
+        }
+        lnbList[idx].classList.add("active");
+        document.getElementsByClassName("page-num")[0].textContent =
+            "0" + (number + 1);
     }
     function lnbClick() {
         var lnbBtn = nodesReturn();
         for (var i = 0; i <= 4; i++) {
             lnbBtn[i].addEventListener("click", function () {
-                var lnbIdx = $(this).attr("data-num");
+                var lnbIdx = this.getAttribute("data-num");
                 pageGoTo(lnbIdx);
             });
         }

@@ -378,7 +378,7 @@ body {
     box-sizing: border-box;
     background: #fff;
     width: 100%;
-    z-index: 104;
+    z-index: 100;
     transition: all 0.3s ease;
     .top-header {
         background: #313133;
@@ -815,7 +815,10 @@ footer {
 // floating-menu
 .float-menu-wrapper {
     position: relative;
-    z-index: 102;
+    z-index: 99;
+    &.on {
+        z-index: 101;
+    }
     .float-menu {
         position: fixed;
         bottom: 190px;
@@ -1220,7 +1223,9 @@ footer {
         }
     }
 }
-
+.slick-slider {
+    z-index: 2;
+}
 // MEDIA QUERY
 @media screen and(max-width: 1700px) {
     #gnb {
@@ -1311,7 +1316,7 @@ footer {
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
-                        right: 30px;
+                        right: 20px;
                     }
                 }
                 .mob-etc {

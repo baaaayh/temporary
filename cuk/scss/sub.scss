@@ -1242,6 +1242,7 @@ span {
             z-index: 2;
             text-align: center;
             vertical-align: middle;
+            word-break: keep-all;
         }
         &:hover {
             &:before {
@@ -3179,6 +3180,7 @@ input[type="checkbox"]:checked + label {
     display: none;
     width: 40px;
     height: 40px;
+    z-index: 3;
     background: $magenta url("../img/common/lnb_arrT_white.png") no-repeat;
     background-size: auto 8px;
     background-position: center center;
@@ -4939,7 +4941,7 @@ input[type="checkbox"]:checked + label {
                 }
             }
             .answer-wrapper {
-                padding: 20px 45px 20px 50px;
+                padding: 20px 20px 20px 50px;
                 p {
                     font-size: 14px;
                     line-height: 1.4;
