@@ -31,6 +31,8 @@ body {
 
     &.pop-open {
         overflow: hidden;
+        touch-action: none;
+        -ms-touch-action: none;
         &.scroll-down {
             header {
                 top: 0;
